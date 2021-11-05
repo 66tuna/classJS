@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>여러 함수 만들기</title>
+</head>
+<body>
+<script>
+//이름있는 함수
+function num(){
+  let result = 3*5;
+  console.log('num', result);
+}
+num();
+//이름 없는 함수
+let room = function(){
+  let result = 3/4;
+  console.log('room', result);
+}
+room();
+// 함수식 만들기
+(function(){
+  let result = 12/0.5;
+  console.log('함수식', result);
+})()
+</script>
+
+</body>
+</html>

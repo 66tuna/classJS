@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>onClick()</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <!--
+버튼->click->ok함수 불러들이기
+버튼->click->no함수 불러들이기
+-->
+    <button type="button" value="ok" onclick="play()">OK</button>
+    <button type="button" value="no" onclick="play1()">NO</button>
+
+    <script>
+        var btn = document.querySelectorAll('button');
+        var val1 = btn[0].getAttribute('value');
+        var val2 = btn[1].getAttribute('value');
+        console.log(btn);
+        console.log(val1);
+        console.log(val2);
+        function play(){
+            if(btn[0]){
+                document.write(val1);
+                console.log(val1);
+            }
+        }
+        function play1(){
+            if(btn[1]){
+                document.write(val2);
+                console.log(val2);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

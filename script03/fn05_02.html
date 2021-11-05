@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>var 변수 사용하기</title>
+
+</head>
+
+<body>
+
+    <script>
+        function logYes() {
+            var local = 2;
+            if (local) {
+                var local = 5;
+                console.log('if문:', local);
+            }
+            console.log('if문 밖: ', local);
+        }
+        logYes();
+        
+        const num = 6;
+        num = 7;
+    </script>
+
+</body>
+
+
+
+</html>

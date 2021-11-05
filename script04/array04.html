@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>for</title>
+</head>
+
+<body>
+	<button>click</button>
+
+	<!-- for 1 -->
+	<script>
+		// const cars = ["red", "green", "blue"];
+		// const BTN = document.querySelector('button');
+
+		// function play(){
+		// 	for(let i=0; i<cars.length; i++){
+		// 		document.write(`${cars[i]} best car<br>`);
+		// 	}
+		// }
+
+		// BTN.onclick = play;
+
+
+		const colors = ['red', 'yellow', 'green', 'blue', 'gray'];
+		const BTN = document.querySelector('button');
+
+
+		function play() {
+			for (let i = 0; i<colors.length; i++) {
+				document.write(`<img src="images/${colors[i]}.png" alt="${colors[i]}" <br>`)
+			}
+		}
+
+		// function play(){
+		// 	colors.forEach(function (item){
+		// 		document.write(`<img src='images/${item}.png' alt='err'> <br>`);
+		// 	});
+		// }
+
+
+		BTN.onclick = play;
+	</script>
+
+	<!-- <script>
+
+</script> -->
+
+
+</body>
+
+</html>
