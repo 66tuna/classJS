@@ -1,40 +1,83 @@
 ﻿<!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>속성변화</title>
 
-<link href="css/reset.css" rel="stylesheet">
-<style>
-section{width:378px; margin:20px auto; border:1px solid #666;}
-section>p{width:100%; text-align:center; margin-bottom:25px;}
-section>div{width:100%; padding:25px 0; overflow:hidden;}
-section>div>div{width:110px; margin:0 3px; float:left;}
-section div.box01{border:5px solid #F30; padding:3px; background-color:#FF0;}
-</style>
+<head>
+	<meta charset="UTF-8">
+	<title>속성변화</title>
+
+	<link href="css/reset.css" rel="stylesheet">
+	<style>
+		section {
+			width: 378px;
+			margin: 20px auto;
+			border: 1px solid #666;
+		}
+
+		section>p {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 25px;
+		}
+
+		section>div {
+			width: 100%;
+			padding: 25px 0;
+			overflow: hidden;
+		}
+
+		section>div>div {
+			width: 110px;
+			margin: 0 3px;
+			float: left;
+		}
+
+		section div.box01 {
+			border: 5px solid #F30;
+			padding: 3px;
+			background-color: #FF0;
+		}
+	</style>
+
+	<script src="../js/jquery-3.6.0.min.js"></script>
 
 </head>
+
 <body>
-<section>
-<!-- 버튼-->
-<p>
-<button id="btn01">스타일 가져오기1</button>
-<button id="btn02">스타일 가져오기2</button>
-</p>
-<!--box-->
-<div>
-<div class="box01">
-	<p><img src="images/img01.png" alt="이미지01"></p>
-</div>
-<div class="box02">
-<p><img src="images/img02.png" alt="이미지02"></p>	
-</div>
-<div class="box03">
-	<p><img src="images/img03.png" alt="이미지03"></p>
-</div>
+	<section>
+		<!-- 버튼-->
+		<p>
+			<button id="btn01">스타일 가져오기1</button>
+			<button id="btn02">스타일 가져오기2</button>
+		</p>
+		<!--box-->
+		<div>
+			<div class="box01">
+				<p><img src="images/img01.png" alt="이미지01"></p>
+			</div>
+			<div class="box02">
+				<p><img src="images/img02.png" alt="이미지02"></p>
+			</div>
+			<div class="box03">
+				<p><img src="images/img03.png" alt="이미지03"></p>
+			</div>
 
 
-</div>
-</section>
+		</div>
+	</section>
+
+	<script>
+		$(function(){
+			$('#btn01').click(function(){
+				let border = $('div.box01').css('border');
+				$('div.box02').css('border', border);
+			});
+
+			$('#btn02').click(function(){
+				let bgc = $('.box01').css('background-color');
+				$('.box03').css('background-color', bgc);
+			});
+		});
+	</script>
 </body>
+
 </html>

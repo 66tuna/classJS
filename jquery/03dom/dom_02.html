@@ -1,25 +1,44 @@
 ﻿<!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>2.Dom</title>
+    <meta charset="UTF-8">
+    <title>2.Dom</title>
 
-<style>
-ul{display:none;}
-</style>
-<
+    <style>
+        ul {
+            display: none;
+        }
+    </style>
 
-</head>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    </head>
+
 <body>
-<button id="btn01">요소 변경</button>
-<button id="btn02">이미지 가져오기</button>
-<p id="first">변경전</p>
-<p id="second"> 이미지 가져오기</p>
+    <button id="btn01">요소 변경</button>
+    <button id="btn02">이미지 가져오기</button>
+    <p id="first">변경전</p>
+    <p id="second"> 이미지 가져오기</p>
 
 
-<ul>
-<li><img src="images/pic_04.jpg" alt="sample01"></li>
-<li><img src="images/pic_03.jpg" alt="sample01"></li>
-</ul>
+    <ul>
+        <li><img src="images/pic_04.jpg" alt="sample01"></li>
+        <li><img src="images/pic_03.jpg" alt="sample01"></li>
+    </ul>
+
+    <script>
+        $(function(){
+            $('#btn01').click(function(){
+                $('#first').html('<strong>변경되었습니다.</strong>')
+            });
+
+            $('#btn02').click(function(){
+                let pic = $('ul>li:first').html();//ul>li:first html은 가져오는것
+                console.log(pic);
+                $('#second').html(pic);
+            });
+        });
+    </script>
 </body>
+
 </html>

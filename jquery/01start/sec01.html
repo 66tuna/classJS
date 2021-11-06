@@ -1,40 +1,55 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>start</title>
 
+<head>
+    <meta charset="UTF-8">
+    <title>start</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
 
 </head>
+<!-- jquery 입지 넓은게 명령어  새로운 프로젝트, 리뉴얼, 수정 -->
+<!-- 라이브러리 -> 기능집단 (함수집단) -> 라이브러리 함수 -> 연결 html -> 준비 되면  -->
+
+<!-- react -> npm, cdn -->
+
+<!-- 플러그인 = 아래버전 개발 + 최신버전
+     다운로드형 || 개발형
+    -->
 <body>
-<p><button  id="btn">버튼</button></p>
-<ul id="list1">
-<li class="a">list1 item a</li>
-<li class="b">list1 item a</li>
-<li class="c">list1 item b</li>
-<li class="d">list1 item b</li>
-</ul>
-<p class="a">class a</p>
-<q>normal 01</q>
-<p class="b">class b</p>
-<p>normal 02</p>
-<p id="first">변경전</p>
-<p id="second">아무것도 없습니다.</p>
-<p class="olde"><strong>변경되었습니다.</strong></p>
+    <p><button id="btn">버튼</button></p>
 
+    <ul id="list1">
+        <li class="a">list1 item a</li>
+        <li class="b">list1 item a</li>
+        <li class="c">list1 item b</li>
+        <li class="d">list1 item b</li>
+    </ul>
 
+    <p class="a">class a</p>
+    <q>normal 01</q>
+    <p class="b">class b</p>
+    <p>normal 02</p>
+    <p id="first">변경전</p>
+    <p id="second">아무것도 없습니다.</p>
+    <p class="olde"><strong>변경되었습니다.</strong></p>
+
+    <script>
+        /* jQuery(document.ready(function(){
+            // }));
+            document.ready(function(){실행문}); onload는 html문서를 다 읽고 js를 읽는다고 한다면 ready는 반대로 html 문서를 일기전에 처리한다
+           
+           1 함수연결
+           2 준비 
+           3 실행문
+            */
+        $(function () {
+            $('button').click(function (e) {
+                $('#first').text('welcome');
+                $('.b').css('background-color', 'yellow');
+            });
+        });
+
+    </script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

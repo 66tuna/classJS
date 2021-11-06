@@ -1,12 +1,31 @@
 ﻿<!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>속성변화</title>
 
+<head>
+    <meta charset="UTF-8">
+    <title>속성변화</title>
+
+
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-<button id="btn01">버튼</button>
-<p> 텍스트 텍스트 텍스트 텍스트 텍스트 </p>
+    <button id="btn01">버튼</button>
+    <p> 텍스트 텍스트 텍스트 텍스트 텍스트 </p>
+
+    <script>
+        $(function(){
+            $('#btn01').click(function(){
+                $('p').css({
+                    fontSize:'35px',
+                    color:'pink',
+                    backgroundColor:'green',
+                    fontWeight:'bold'
+                });
+            });
+        })
+    </script>
 </body>
+
 </html>

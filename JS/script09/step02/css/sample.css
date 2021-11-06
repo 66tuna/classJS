@@ -21,7 +21,7 @@ p{width:600px;
   height:327px;
   margin: 0 auto;
   border: 2px solid #cc420f;
-  /* overflow:hidden; */
+  overflow:hidden;
 }
 #gall{
   position: absolute;

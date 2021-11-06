@@ -1,29 +1,54 @@
 ﻿<!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>속성변화</title>
+	<meta charset="UTF-8">
+	<title>속성변화</title>
 
-<style>
-section{width:500px; margin:25px auto; text-align:center;}
-div{display:none;}
-</style>
+	<style>
+		section {
+			width: 500px;
+			margin: 25px auto;
+			text-align: center;
+		}
 
+		div {
+			display: none;
+		}
+	</style>
+
+	<script src="../js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-<section>
-<p class="btn">
-<button id="btn01">이미지 가져오기</button>
-<button id="btn02">링크 변경하기</button></p>
-<p class="box01">
-	<img src="images/img01.png" alt="sample"></p>
-<p class="box02"><a href="http://www.naver.com">다음으로 변경하기</a></p>
+	<section>
+		<p class="btn">
+			<button id="btn01">이미지 가져오기</button>
+			<button id="btn02">링크 변경하기</button>
+		</p>
+		<p class="box01">
+			<img src="images/img01.png" alt="sample">
+		</p>
+		<p class="box02"><a href="http://www.naver.com">다음으로 변경하기</a></p>
 
-<div>
-	<img src="images/img02.png" alt="sample"></div>
-</section>
+		<div>
+			<img src="images/img02.png" alt="sample">
+		</div>
+	</section>
+
+	<script>
+		$(function(){
+			$('#btn01').click(function(){
+				let pic = $('div>img').attr("src");
+				$('.box01>img').attr("src", pic);
+			});
+
+			$('#btn02').click(function(){
+				let a = 'https://google.com/';
+				$('.box02>a').attr('href', a).text('구글사이트');
+			});
+		});
+	</script>
 </body>
+
 </html>
-
-
-

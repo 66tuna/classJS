@@ -1,20 +1,41 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>jQuery start</title>
-<!--준비하기-->
-
+    <meta charset="utf-8">
+    <title>jQuery start</title>
+    <!--준비하기-->
+    <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-<button type="button">sample</button>
-<p></p>
+    <button type="button">sample</button>
+    <p></p>
 
-<script>
+    <script>
+        $(function(){
+            // 실행문;
+            // document.querySelector('p');
+            // document.querySelector('p').innerHTML = 'asdf';
+            $('p').text('welcome');//innerHTML대신 text를 쓴다.
 
-</script>
+            //click ->  onclick = 함수  => 누구.click(function());
+            //.addEventListener('이벤트', 함수) => 누구.on('click', function())
+
+            //버튼 클릭하면 -> p요소를 찾아서 -> css를 적용('속성', '값')
+            $('button').click(function(e){
+                $('p').css('background-color', '#ffbcd1');
+            });
+
+            $('button').on('mouseover', function(e){
+                $('p').css('color', 'red');
+            });
+            
+            $('button').on('mouseout', function(){
+                $('p').css('color', '#000');
+            });
+        });
+    </script>
 </body>
+
 </html>
-
-
-

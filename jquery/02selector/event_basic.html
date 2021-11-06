@@ -1,50 +1,77 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>event</title>
 
-<style>
-p{margin:0; padding:0;}
-div{width:700px; height:70px; margin:0 auto 25px; overflow:hidden;}
-p.button{width:200px; height:70px; float:left; background:#333;
-text-align:center; line-height:70px; font-size:1.2em; color:#fff;}
-p.back{width:450px; height:66px; border:2px solid #333; float:right;}
-</style>
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+    <!-- 쑥쩨-->
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 700px;
+            height: 70px;
+            margin: 0 auto 25px;
+            overflow: hidden;
+        }
+
+        p.button {
+            width: 200px;
+            height: 70px;
+            float: left;
+            background: #333;
+            text-align: center;
+            line-height: 70px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        p.back {
+            width: 450px;
+            height: 66px;
+            border: 2px solid #333;
+            float: right;
+        }
+    </style>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 
-<div id="box_01">
-<p class="button">click</p>
-<p class="back"></p>
-</div>
+    <div id="box_01">
+        <p class="button">click</p>
+        <p class="back"></p>
+    </div>
 
-<div id="box_02">
-<p class="button">doubleClick</p>
-<p class="back"></p>
-</div>
+    <div id="box_02">
+        <p class="button">doubleClick</p>
+        <p class="back"></p>
+    </div>
 
-<div id="box_03">
-<p class="button">mouseUp & down</p>
-<p class="back"></p>
-</div>
+    <div id="box_03">
+        <p class="button">mouseUp & down</p>
+        <p class="back"></p>
+    </div>
 
-<div id="box_04">
-<p class="button">mouseOver & out</p>
-<p class="back"></p>
-</div>
+    <div id="box_04">
+        <p class="button">mouseOver & out</p>
+        <p class="back"></p>
+    </div>
 
-<div id="box_05">
-<p class="button">mouseEnter & leaver</p>
-<p class="back"></p>
-</div>
+    <div id="box_05">
+        <p class="button">mouseEnter & leaver</p>
+        <p class="back"></p>
+    </div>
 
-<div id="box_06">
-<p class="button">hover</p>
-<p class="back"></p>
-</div>
-<!--
+    <div id="box_06">
+        <p class="button">hover</p>
+        <p class="back"></p>
+    </div>
+    <!--
 div#box_01 p.button을 클릭하면 div#box_01 p.back의 백그라운드 칼라를 red
 div#box_02 p.button을 더블클릭하면 div#box_02 p.back의 백그라운드 칼라를 yellow
 div#box_03 p.button을 마우스를 다운하면 div#box_03 p.back의 백그라운드 칼라를 green,마우스를 업하면  orange
@@ -55,6 +82,25 @@ div#box_06 p.button을 위에 놓으면3  div#box_06 p.back의 백그라운드 �
 div>p의 첫번째 에 마우스가 떠나면 p.back의 백그라운드 칼라를화이트
 
 -->
+    <script>
+        $(function(){
+            $('#box_01>.button').click(function(){
+                // $(this).next().css('background-color', 'red');
+                $(this).siblings().css('background-color', 'red');
+                $(this).parent().css('background-color', 'yellow');
+            });
 
+            $('#box_02>.button').dblclick(function(){
+                // $('#box_02>.back').css('background-color', 'yellow');
+                $(this).siblings().css('background-color', 'yellow');
+                $(this).parent().css('background-color', 'red');
+            })
+
+            $('#box_03>.button').mouseup(function(){
+                $(this).siblings().css('background-color', 'green');
+            })
+        });
+    </script>
 </body>
+
 </html>
