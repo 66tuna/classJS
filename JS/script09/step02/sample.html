@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<title>Gallery</title>
+<!-- 연결하기 -->
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/sample.css">
+<script src="./js/gallery.js"></script>
+</head>
+
+<body>
+    <h1>Smooth Gallery</h1>
+    <p>가로 움직이는 갤러리</p>
+
+    <div id="gallery">
+        <div class="mas">
+            <!-- 보이는 것  -->
+            <div id="gall">
+                <!-- 전체 -->
+                <ul class="box">
+                    <!-- 소스1 -->
+                    <li><img src="images/img1.jpg" alt="이미지1"></li>
+                    <li><img src="images/img2.jpg" alt="이미지2"></li>
+                    <li><img src="images/img3.jpg" alt="이미지3"></li>
+                    <li><img src="images/img4.jpg" alt="이미지4"></li>
+                    <li><img src="images/img5.jpg" alt="이미지5"></li>
+                </ul>
+            </div>
+
+        </div>
+        <ul class="nav">
+            <li id="g1" data-num="1">no01</li>
+            <li id="g2" data-num="2">no02</li>
+            <li id="g3" data-num="3">no03</li>
+            <li id="g4" data-num="4">no04</li>
+            <li id="g5" data-num="5">no05</li>
+        </ul>
+        <div id="prev">prev</div>
+        <div id="next">next</div>
+    </div>
+    <!-- 카운트 보기 -->
+    <p id="info"></p>
+</body>
+
+</html>

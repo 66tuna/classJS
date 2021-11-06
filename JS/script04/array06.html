@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>for of</title>
+</head>
+<body>
+	<button>click</button>
+
+<!-- for 1 -->
+ <!-- <script>
+	const cars = ["red", "green", "blue"];
+	const BTN = document.querySelector('button');
+
+	function play(){
+		for(let str of cars){
+			document.write(`${str} <br>`);
+		}
+	}
+
+	BTN.onclick = play;
+
+
+ </script> -->
+<!-- for of 2 -->
+ <script>
+	const colors = ['red','yellow', 'green', 'blue','gray'];
+	const BTN = document.querySelector('button');
+	
+	function play(){
+		for(let str of colors){
+			document.write(`<img src="images/${str}.png" alt="${str}"> <br>`)
+		}
+	}
+
+	BTN.onclick = play;
+</script> 
+</body>
+</html>

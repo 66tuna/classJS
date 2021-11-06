@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>데이터의 형의 변화</title>
+</head>
+
+<body>
+
+
+    <!--
+자료형변화
+문자 데이터를 숫자 데이터 형으로
+1. parseInt() -> window
+2. Number() -> Number
+-->
+
+    <script>
+        let sum01 = 123;
+        let sum02 = '345';
+        console.log(sum01 + sum02);
+        console.log(sum01 + parseInt(sum02));
+        let sum03 = Number(sum02);
+        console.log(typeof sum03);
+        console.log(sum01 + sum03);
+    </script>
+</body>
+
+</html>

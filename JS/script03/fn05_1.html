@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>let의 영역변수 사용하기</title> 
+</head>
+<body>
+<script>
+    // let a = '설악산';
+    // if(a){
+    //     console.log(a);
+    // }
+
+    function logYes(){
+        let local = 2;
+        if(local){
+            let local = 5;
+            console.log('if문:',local);
+        }
+        console.log('if문 밖: ',local);
+    }
+
+    logYes();
+</script>
+</body>
+</html>

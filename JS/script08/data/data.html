@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 객체1</title>
+    <link rel="stylesheet" href="css/box.css">
+</head>
+
+<body>
+    <div>
+        <button type="text" name="1">pic01</button>
+        <button type="text" name="2">pic02</button>
+        <button type="text" name="3">pic03</button>
+        <button type="text" name="4">pic04</button>
+    </div>
+    <dl>
+        <dt></dt>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+    </dl>
+    <script>
+        const TITLE = document.querySelector('dl>dt');
+        const PIC = document.querySelector('dl>dd:nth-child(2)');
+        const ARTIST = document.querySelector('dl>dd:nth-child(3)');
+        const YEAR = document.querySelector('dl>dd:nth-child(4)');
+
+        const BUTTON = document.querySelectorAll('button');
+        console.log(BUTTON);
+        //시스템
+        function Picture(image, title, artist, year) {
+            this.image = image;
+            this.title = title;
+            this.artist = artist;
+            this.year = year;
+        }
+        //매서드
+        Picture.prototype.art = function() {
+                TITLE.innerHTML = this.title;
+                PIC.innerHTML = `<img src="${this.image}" alt="${this.title}">`;
+                ARTIST.innerHTML = this.artist;
+                YEAR.innerHTML = this.year;
+            }
+            //인스턴스
+        var picture = [
+            new Picture('images/pic01.jpg', '제목1', '작가1', 1991),
+            new Picture('images/pic02.jpg', '제목2', '작가2', 1992),
+            new Picture('images/pic03.jpg', '제목3', '작가3', 1993),
+            new Picture('images/pic04.jpg', '제목4', '작가4', 1994)
+        ];
+
+        //picture[1].art();
+        //btn
+        function btn(e) {
+            num = this.getAttribute('name');
+            picture[num - 1].art();
+            console.log(num);
+        }
+        BUTTON.forEach(function(BUTTON) {
+            BUTTON.addEventListener('click', btn)
+        });
+        // BUTTON.forEach.call(BUTTON,function(BUTTON){BUTTON.addEventListener('click',btn)});
+        //BUTTON.addEventListener('click',btn);
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->

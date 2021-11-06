@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let day = new Date();
+        let gd = day.getDay();
+        console.log(gd);
+        document.write(`오늘은 ${day.getFullYear()}년 ${day.getMonth()+1}월 ${day.getDate()}일 `)
+        switch (gd) {
+            case 1:
+                {
+                    document.write('월요일');
+                    break;
+                }
+            case 2:
+                {
+                    document.write('화요일');
+                    break;
+                }
+            case 3:
+                {
+                    document.write('수요일');
+                    break;
+                }
+            case 4:
+                {
+                    document.write('목요일');
+                    break;
+                }
+            case 5:
+                {
+                    document.write('금요일');
+                    break;
+                }
+            case 6:
+                {
+                    document.write('토요일');
+                    break;
+                }
+            case 0:
+                {
+                    document.write('일요일');
+                    break;
+                }
+        }
+    </script>
+</body>
+
+</html>

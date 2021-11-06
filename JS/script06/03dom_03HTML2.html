@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>creatElement</title>
+    <style>
+    *{margin:0; padding:0;}
+    img{max-width:100%;}
+      .picBox {
+      	margin: 2em auto;
+      	width: 500px;
+      }
+
+      .picBox figcaption {
+      	margin-top: 1em;
+      	padding-right: 30%;
+      	padding-left: 1em;
+      	font-style: italic;}
+    </style>
+  </head>
+  <body>
+    <figure class="picBox">
+        <img src="images/earth.jpg" alt="우주에서 본 지구의 모습입니다.">
+    </figure>
+    <script>
+      //소스 만들기
+      const BOX = document.querySelector('.picBox');
+      const IMG = document.querySelector('.picBox>img');
+      let ALT = IMG.getAttribute('alt');
+      //creat
+      let FIGCAPTION = document.createElement('figcaption');
+      FIGCAPTION.append(ALT);//append랑 appendChild의 차이점을 모르겠습니다.
+      BOX.append(FIGCAPTION);
+      IMG.setAttribute('alt', '상세이미지');
+      //적용하기
+      
+    </script>
+  </body>
+</html>

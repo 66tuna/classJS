@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>event 속성 사용하기1</title>
+</head>
+<body>
+  <p class="btn">
+    <button type="button" value="red">red</button>
+  </p>
+  <p class="text"></p>
+  <script>
+    const btn = document.querySelector('p.btn>button');
+    const val = btn.getAttribute('value');
+    const text = document.querySelector('p.text');
+    // console.log(text);
+    // console.log(btn);
+    function play(){
+      text.innerHTML = val + '클릭이 되었습니다.'
+    }
+    btn.onclick = play;
+  </script>
+</body>
+</html>
