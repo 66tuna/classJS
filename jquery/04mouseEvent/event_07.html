@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>event</title>
-
+<script src="../js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <button>li 요소를 추가</button>
@@ -13,6 +13,22 @@
 <li><a href="img/Jellyfish.jpg"> 해파리</a></li>
 </ul>
 <p><img src="img/flower.jpg" alt=" 꽃" /></p>
-
+<script>
+  $(function(){
+    $('body').on('click','li>a',function(e){
+      let pic = $(this).attr('href');
+      $('p>img').attr('src',pic);
+      return false;
+    });
+    // $('li>a').on('click',function(e){
+    //   let pic = $(this).attr('href');
+    //   $('p>img').attr('src',pic);
+    //   return false;
+    // });
+    $('button').on('click',function(e){
+      $('ul').append('<li><a href="img/building.jpg">빌딩</a></li>')
+    });
+  });
+</script>
 </body>
 </html>

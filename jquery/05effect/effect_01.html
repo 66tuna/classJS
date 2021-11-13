@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>sample</title>
-
+<script src="../js/jquery-3.6.0.min.js"></script>
 <!--콜백함수-->
 <style type="text/css">
 section{width:500px; margin:20px auto;}
@@ -28,7 +28,19 @@ display:none;
 <p class="back back02"></p>
 </div>
 </section>
-
+<script>
+  $(function(){
+    $('.btn01').on('click',function(e){
+      $('.back01').fadeIn(1000);
+      $('.back01').css('background-color','yellow');
+    });
+    $('.btn02').on('click',function(e){
+      $('.back02').fadeIn(3000,function(){
+        $('.back02').css('background-color','yellow');
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
