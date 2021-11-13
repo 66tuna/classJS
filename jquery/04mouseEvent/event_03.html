@@ -1,37 +1,69 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>sample</title>
-<link rel="stylesheet" href="css/style.css">
-<script src="../js/jquery-3.6.0.min.js"></script>
+    <meta charset="utf-8">
+    <title>sample</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-<!--큰이미지-->
-<div id="wrap">
-<div id="bigImage">
-	<img src="pic/flw_01.jpg" alt="이미지01" width="800px">
-  </div>
-  <!--작은이미지 목록-->
-  <div id="all">
-  <p id="prev"><img src="pic/prev.png" width="23" height="23"></p>
-  <p id="next"><img src="pic/next.png" width="23" height="23"></p>
-  <div id="show_view">
-<ul>
-<li><a class="smallImage" href="pic/flw_01.jpg">
-<img src="pic/flw_01.jpg" width="175px" ></a></li>
-<li><a class="smallImage"  href="pic/flw_02.jpg">
-<img src="pic/flw_02.jpg" width="175px" ></a></li>
-<li><a class="smallImage"  href="pic/flw_03.jpg">
-<img src="pic/flw_03.jpg" width="175px" ></a></li>
-<li><a class="smallImage"  href="pic/flw_04.jpg">
-<img src="pic/flw_04.jpg" width="175px" ></a></li>
-<li><a class="smallImage"  href="pic/flw_05.jpg">
-<img src="pic/flw_05.jpg" width="175px" ></a></li>
-</ul></div></div>
-</div>
-<script>
-  $(function(){});
-</script>
+    <!--큰이미지-->
+    <div id="wrap">
+        <div id="bigImage">
+            <img src="pic/flw_01.jpg" alt="이미지01" width="800px">
+        </div>
+        <!--작은이미지 목록-->
+        <div id="all">
+            <p id="prev"><img src="pic/prev.png" width="23" height="23"></p>
+            <p id="next"><img src="pic/next.png" width="23" height="23"></p>
+            <div id="show_view">
+                <ul>
+                    <li>
+                        <a class="smallImage" href="pic/flw_01.jpg">
+                            <img src="pic/flw_01.jpg" width="175px"></a>
+                    </li>
+                    <li>
+                        <a class="smallImage" href="pic/flw_02.jpg">
+                            <img src="pic/flw_02.jpg" width="175px"></a>
+                    </li>
+                    <li>
+                        <a class="smallImage" href="pic/flw_03.jpg">
+                            <img src="pic/flw_03.jpg" width="175px"></a>
+                    </li>
+                    <li>
+                        <a class="smallImage" href="pic/flw_04.jpg">
+                            <img src="pic/flw_04.jpg" width="175px"></a>
+                    </li>
+                    <li>
+                        <a class="smallImage" href="pic/flw_05.jpg">
+                            <img src="pic/flw_05.jpg" width="175px"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            // 이미지
+            $('#prev').on('click', function() {
+                $('#show_view>ul>li:first').appendTo('#show_view>ul');
+            });
+            $('#next').on('click', function() {
+                $('#show_view>ul>li:last').prependTo('#show_view>ul');
+            });
+
+            //이미지바꾸기
+            $('#show_view>ul>li>a').on('click', function(e) {
+                let pic = $(this).attr('href');
+                $('#bigImage>img').attr('src', pic);
+                console.log(pic);
+                return false;
+
+            })
+        });
+    </script>
 </body>
+
 </html>

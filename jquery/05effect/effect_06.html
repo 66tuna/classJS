@@ -1,21 +1,45 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>sample</title>
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>sample</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
 </head>
+
 <body>
-<div>
-	<ul>
-		<li  id="flower"><img src="img/flower.jpg" alt="flower"></li>
-		<li  id="building"><img src="img/building.jpg" alt="building"></li>
-	</ul>
-</div>
+    <div>
+        <ul>
+            <li id="flower"><img src="img/flower.jpg" alt="flower"></li>
+            <li id="building"><img src="img/building.jpg" alt="building"></li>
+        </ul>
+    </div>
+
+    <script>
+        $(function() {
+            $('#flower').on('click', function() {
+                // $(this).animate({
+                //     marginLeft: '-400px'
+                // }, 1000);
+                $('ul').animate({
+                    marginLeft: '-=400px'
+                }, 1000);
+            });
+
+            $('#building').on('click', function() {
+                // $(this).animate({
+                //     marginLeft: '0px'
+                // }, 1000);
+                $('ul').animate({
+                    marginLeft: '+=400px'
+                }, 1000);
+            });
+        });
+    </script>
 </body>
+
+
 </html>
-
-
-
-

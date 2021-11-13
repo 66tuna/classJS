@@ -1,12 +1,29 @@
 @charset "UTF-8";
+
 /*보이는 것 기준*/
-div{
-width:400px;
-height:267px;
+
+div {
+    width: 400px;
+    height: 267px;
+    overflow: hidden;
 }
+
+
 /*전체기준*/
-ul{width:800px;
-height:267px;}
+
+ul {
+    width: 800px;
+    height: 267px;
+    display: flex;
+}
+
+
 /*보이는 것 기준*/
-ul>li{}
-ul>li>img{vertical-align:top;}
+
+ul>li {
+    width: 400px;
+}
+
+ul>li>img {
+    vertical-align: top;
+}

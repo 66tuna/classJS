@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>galleyr_basic</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="menu">
+
+            <div class="page">
+                <ul>
+                    <li>
+                        <a href="img/img_01.jpg"><img src="img/img_01.jpg" width="140" height="105"></a>
+                    </li>
+                    <li>
+                        <a href="img/img_02.jpg"><img src="img/img_02.jpg" width="140" height="105"></a>
+                    </li>
+                    <li>
+                        <a href="img/img_03.jpg"><img src="img/img_03.jpg" width="140" height="105"></a>
+                    </li>
+                    <li>
+                        <a href="img/img_10.jpg"><img src="img/img_10.jpg" width="140" height="105"></a>
+                    </li>
+                    <li>
+                        <a href="img/img_05.jpg"><img src="img/img_05.jpg" width="140" height="105"></a>
+                    </li>
+                    <li>
+                        <a href="img/img_06.jpg"><img src="img/img_06.jpg" width="140" height="105"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <p><img src="img/prev.png" class="prev">
+                <img src="img/next.png" class="next" /></p>
+        </div>
+        <!--추가분-->
+
+        <div id="main">
+            <!-- 생성이미지 여기다가 만듬 -->
+            <img src="img/img_01.jpg" alt="상세이미지">
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            $('ul>li>a').on('click', function() {
+                var pic = $(this).attr('href');
+                $('#main').prepend('<img src="' + pic + '" alt="상세이미지">');
+
+                $('#main>img:last').fadeOut(400, function() {
+                    $('#main>img:not(:eq(0))').remove();
+                    // $(this).remove();
+                });
+                return false;
+            });
+        })
+    </script>
+</body>
+
+</html>
