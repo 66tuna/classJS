@@ -1,17 +1,39 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>val</title>
-<style>
-  span {
-    display: none;
-  }
-  </style>
+    <meta charset="UTF-8">
+    <title>val</title>
+    <style>
+        span {
+            display: none;
+        }
+    </style>
+    <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-<p><input type="text"> <span>focus fire</span></p>
-<p><input type="password"> <span>focus fire</span></p>    
+    <p><input type="text"> <span>focus fire</span></p>
+    <p><input type="password"> <span>focus fire</span></p>
+
+    <script>
+        $(function() {
+            $('input').on('focus', function() {
+                //focus->inline -> delay(기다리고) -> fadeOut()
+                $(this).next('span').css('display', 'inline').delay(800).fadeOut(700);
+            });
+        });
+
+        // $(function() {
+        //     $('input').on('focus', function() {
+        //         $(this).next().fadeIn(600);
+        //         $(this).next().css('display', 'inline');
+        //     });
+        //     $('input').on('blur', function() {
+        //         $(this).next().fadeOut(600);
+        //     });
+        // });
+    </script>
 </body>
+
 </html>

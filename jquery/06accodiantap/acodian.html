@@ -35,16 +35,36 @@
     <script type="text/javascript">
         $(function() {
             $('dt:first').addClass('selected');
-            $('dt:not(:first)').next().hide();
+            $('dd:not(:first)').css('width', '0');
 
             $('dl>dt').on('click', function() {
-                $('.selected').next().animate({
-                    width: '0'
-                }, 1000);
+                /*let str = $(this).next().css('width');
+                if (str == '0px') {
+                    $('.selected').next().animate({ 내가 한거
+                        width: '0'
+                    }, 1000);
+    
+                    $(this).next().animate({
+                        width: '500px'
+                    }, 1000);
+    
+                    $('dt').removeClass('selected');
+                    $(this).addClass('selected');
+                }*/
 
-                $(this).next().animate({
-                    width: '500px'
-                }, 1000)
+                // 선생님이 하신거
+                let ddWidth = $(this).next().css('width');
+                if (ddWidth == '0px') {
+                    $('dt.selected').next().animate({
+                        width: '0'
+                    }, 300);
+                    $(this).next().animate({
+                        width: '500px'
+                    }, 300);
+
+                    $('dt').removeClass('selected');
+                    $(this).addClass('selected');
+                }
             });
         });
     </script>

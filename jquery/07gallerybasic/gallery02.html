@@ -65,16 +65,45 @@
                     $('#next, #prev').show();
                 });
             }
-            ani();
-            str = setInterval(ani, 3000);
 
-            //마우스
-            $('#view').on('mouseenter', function() {
+
+            function timer() {
+                str = setInterval(ani, 1500);
+            }
+
+
+            function stop() {
                 clearInterval(str);
+            }
+
+            timer();
+            //마우스
+            //jjavascript 형으로
+            // let btn = document.querySelector('#source');
+            // btn.addEventListener('mouseover', stop);
+            // btn.addEventListener('mouseout', timer);
+
+            // $('#source').on('mouseenter', function() {
+            //     stop();
+            // });
+            // $('#source').on('mouseleave', function() {
+            //     timer();
+            // })
+
+
+            //li기준으로 -> 각각 작동 -> javascript에서는 forEach() jQuery에서는 each()->for in() 각각의 작동 붙이는 일
+
+            $('#source>li').each(function() {
+                $(this).on('mouseleave', function() {
+                    timer();
+                });
             });
-            $('#view').on('mouseleave', function() {
-                setInterval(ani, 3000);
-            })
+
+            $('#source>li').each(function() {
+                $(this).on('mouseleave', function() {
+                    stop();
+                });
+            });
         });
     </script>
 </body>

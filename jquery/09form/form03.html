@@ -1,13 +1,29 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>val</title>
+    <meta charset="UTF-8">
+    <title>val</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 
-<input type="text" value="some text">
-<p></p>
+    <input type="text" value="some text">
+    <p></p>
+
+    <script>
+        $(function() {
+            $(':text').on('keyup', function() {
+                let VAL = $(this).val();
+                $('p').text(VAL);
+            });
+            $('input').on('blur', function() {
+                $(this).val('som');
+                $('p').empty();
+            });
+        });
+    </script>
 </body>
+
 </html>
