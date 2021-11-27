@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스페레드 연산자2(객체형)</title>
+</head>
+<body>
+    <script>
+        
+        let myCar = {
+            brand: 'brand1',
+            model: 'model1',
+            color: 'red',
+        };
+
+        let myHouse = {
+            type: 'house',
+            year: '2000',
+            color: 'yellow'
+        }
+
+        let myUpdata = {
+            ...myCar, ...myHouse
+        }
+        //이건 배열이 아닌 객체이므로 저렇게(23번째 줄) 써야한다
+        console.log(myUpdata);
+        
+    </script>
+</body>
+</html>
