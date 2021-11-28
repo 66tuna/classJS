@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* % -> 가로만 */
+div#box{
+    /* width: 70%; */
+    width:  1200px ;
+    height: 550px;
+    margin: 0 auto;
+    background-color: #ffbcd1;
+}
+
+section#s_box01{
+    width: 980px;
+    height: 500px;
+    float: left;
+    background-color: #666;
+}
+
+p.par_01{
+    width: 600px;
+    height: 450px;
+    float: left;
+    background-color: orange;
+}
+
+section#s_box02{
+    width: 220px;
+    height: 500px;
+    float: left;
+    background-color: yellow;
+}
+
+p.par_02{
+    width: 380px;
+    height: 450px;
+    float: left;
+    background-color: blue;
+}

@@ -1,0 +1,95 @@
+body{
+    background: #1a1a1a url('../img/stars-grad.png') repeat-x center top;
+
+}
+
+div{
+    width: 497px;
+    margin: 0 auto;
+    padding: 38px 35px 18px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+div>ul{
+    /* background-color: rgb(65, 65, 65); */
+    display: flex;
+    /*flex-wrap wrap이란 flex-item들이 영역을 벗어날려 하면 벗어나지 못하게 여래행으로 나누게 만드는 것이다*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div>ul>li{
+    width: 205px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+div>ul>li>a{
+    width: 185px;
+    height: 123px;
+    display: block;
+    background: url('../img/moon.png') no-repeat 0 0;
+    position: relative;
+}
+
+div>ul>li>a>img{
+    position: absolute;
+}
+
+div>ul>li:nth-child(1)>a>img{
+    width: 78px;    
+    left: 28px;
+    top: 15px;
+}
+div>ul>li:nth-child(1)>a:hover>img{
+    animation: 1s ease-in infinite alternate ani,
+                1s ease-in infinite alternate opacity;
+}
+div>ul>li:nth-child(2)>a>img{
+    width: 67px;
+    top: 16px;
+    left: 56px;
+    animation: 6s linear infinite rotate,
+                1s ease-in infinite alternate opacity;
+}
+div>ul>li:nth-child(3)>a>img{
+    width: 78px;
+    bottom: 0;
+    left: 38px;
+}
+div>ul>li:nth-child(4)>a>img{
+    width: 70px;
+    left: 59px;
+    top: 21px;
+}
+
+div>ul>li>span{
+    font: bold 18px Aria, sans-serif;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes ani{
+    0%{left: 38px;}
+    100%{left: 60px;}
+    /* 
+    0%{transform: translateX(34px)} 
+    100%{transform: translateX(54px)}
+    */
+}
+@keyframes rotate{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes opacity{
+    0%{opacity: 1;}
+    100%{opacity: 0.1;}
+}
+@keyframes scale{
+    0%{transform: scale(1);}
+    100%{transform: scale(1.6);}
+}

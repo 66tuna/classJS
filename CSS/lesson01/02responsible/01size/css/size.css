@@ -1,0 +1,33 @@
+html{}
+
+body {
+     font: normal 100% Arial,Helvetica, sans-serif;
+      background: #e3e0d9;
+     color: #000;
+     font-size: 16px
+ }
+ /* font-size:34px */
+div{
+    font-size: 2.1em/* 34px */;
+    
+}
+/* 55px */
+/* 클자 단위: 크기x -> 반올림, 반내림 OK */
+/* 크기 -> 반올림, 반내림 X -> 소수점 7번째 삭감,  */
+ h1 { 
+     font-size: 1.6em/* 55px */;
+  }
+ /* 24px */
+ h1>span{
+     font-size:  0.4em/* 24px */;
+ }
+ /*25px  */
+ div>p{
+     font-size: 0.7352941em /* 25px */;
+ }
+
+ /*32px*/
+ div>p>span{
+     font-size: 1.28em/* 32px */;
+ }
+ 
