@@ -8,6 +8,6 @@ div{
 
 p{
      background-color:blue;
-     width: 35vw;
+     width: 35vw; /* 50%도 가능 */
      height: 50vh;
 }

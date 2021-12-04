@@ -1,37 +1,38 @@
 @charset "utf-8";
 /* % -> 가로만 */
+img{max-width: 100%;} /*max-width를 완벽히 아해를 못했다*/
 div#box{
     /* width: 70%; */
-    width:  1200px ;
+    width:  80% ; /*1200px*/
     height: 550px;
     margin: 0 auto;
     background-color: #ffbcd1;
 }
 
 section#s_box01{
-    width: 980px;
+    width: 81.66666%/* 980px */;
     height: 500px;
     float: left;
     background-color: #666;
 }
 
 p.par_01{
-    width: 600px;
+    width: 61.2244%/* 600px */;
     height: 450px;
     float: left;
     background-color: orange;
 }
 
-section#s_box02{
-    width: 220px;
-    height: 500px;
-    float: left;
-    background-color: yellow;
-}
-
 p.par_02{
-    width: 380px;
+    width: 38.7755%/* 380px */;
     height: 450px;
     float: left;
     background-color: blue;
+}
+
+section#s_box02{
+    width: 18.33333%/* 220px */;
+    height: 500px;
+    float: left;
+    background-color: yellow;
 }

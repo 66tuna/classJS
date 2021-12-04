@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@media screen and (min-width: 816px){
+    article{
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 815px) and (min-width: 600px){
+    /* 조심하기 */
+    
+
+}
+
+@media screen and (max-width: 599px) and (min-width: 400px) {
+    section>p{
+        column-count: 2;
+        text-align: justify;
+    }
+    footer>ul{
+        width: 73.3333333%;
+    }
+}
+
+@media screen and (max-width: 399px){
+    section>p{
+        column-count: 1;
+        text-align: justify;
+    }
+
+    footer>ul{
+        width: auto;
+        display: block;
+    }
+
+    footer>ul>li{
+        width: auto;
+        text-align: center;
+    }
+}
