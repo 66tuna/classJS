@@ -25,7 +25,7 @@ img{
 }
 
 #wrap>div>article,#wrap>div>header,#wrap>div>footer{
-    width: 1160px;
+    width: 97%/* 1160px */;
     margin: 0 auto;
 }
 div>article>h3{
@@ -76,7 +76,28 @@ header>nav>ul>li>a{
     font: 20px Arial, sans-serif;
     color: #fff;
 }
+nav .close{
+    display: none;
+    position: absolute;
+    width: 35px; height: 35px;
+    right: 25px; top: 25px;
+    /* background-color: yellow; */
+}
+nav .close>span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0; top: 0;
+}
 
+nav .close>span:first-child{
+    transform: rotate(-135deg) translate(0);
+}
+nav .close>span:last-child{
+    transform: rotate(-45deg) translate(0);
+}
 p#btn{
     display: none;
     width: 44px; height: 44px;
@@ -131,6 +152,7 @@ p#btn span:nth-child(5){top: 88%;}
     color: #fff;
 }
 #box01>article>ul>li>span{
+    /* table -> 단위 -> 투명한 png*/
     width: 224px;
     height: 224px;
     display: block;
@@ -160,13 +182,13 @@ p#btn span:nth-child(5){top: 88%;}
 
 #info>h4{
     float: left;
-    width: 287px;
-    margin-left: 30px;
+    width: 24.7413%/* 287px */;
+    margin-left: 2.586206%/* 30px */;
 }
 #info>ul{
     float: right;
-    width: 628px;
-    margin-right: 106px;
+    width: 54.13793103%/* 628px */;
+    margin-right: 9.13793%/* 106px */;
 }
 #info>ul>li{
     /* width: auto; */
@@ -201,8 +223,8 @@ p#btn span:nth-child(5){top: 88%;}
 }
 #skill>ul{
     float: right;
-    width: 628px;
-    margin-right: 106px;
+    width: 54.13793103%/* 628px */;
+    margin-right: 9.13793%/* 106px */;
 }
 
 #skill>ul>li{
@@ -264,6 +286,10 @@ p#btn span:nth-child(5){top: 88%;}
     color: #000;
 }
 
+#show{
+    /* width: auto; */
+}
+
 #all{
     display: flex;
     flex-wrap: wrap;
@@ -286,6 +312,12 @@ p#btn span:nth-child(5){top: 88%;}
 
 #box03 .left, #box03 .right{
     display: none;
+    position: absolute;
+    /* top jquery 계산식 */
+    top: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: red;
 }
 /* box04 */
 #box04{
@@ -297,7 +329,7 @@ p#btn span:nth-child(5){top: 88%;}
 }
 
 #box04 form{
-    width: 1053px;
+    width: 90.7758%/* 1053px */;
     margin: 0 auto;
 }
 
